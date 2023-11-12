@@ -8,8 +8,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
 </head>
-<body class="bg-sky-300">
-    <h1>This is index templates</h1>
+<body  class="bg-fuchsia-700">
+    <nav>
+        <div >
+            <img class="h-20 w-20 shadow-fuchsia-700" src="{% static 'myapp/images/logo.png' %}"  alt="logo" about="logo"/>
+            <span class="text-xl">Akademi sex trip</span>
+        </div>
+    </nav>
 <h2>
     {% for product in item %}
         <a href="{% url 'myapp:detail' product.id %}">
