@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+    <h1>This is index templates</h1>
+<h2>
+    {% for product in item %}
+        <a href="{% url 'myapp:detail' product.id %}">
+        <!--<a href="{{ product.id }}">-->
+            Имя: {{ product.name }} Цена {{ product.price }} <br/>
+        </a>
+
+    {% endfor %}
+</h2>
+</body>
+</html>
