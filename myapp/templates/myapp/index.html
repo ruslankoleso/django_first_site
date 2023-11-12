@@ -1,19 +1,25 @@
-<!DOCTYPE html>
-{%load static %}
-<html lang="en">
+{% extends 'myapp/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
-</head>
-<body  class="bg-fuchsia-700">
-    <nav>
-        <div >
+{%load static %}
+    {% block content %}
+<nav class="bg-pink-300 shadow-indigo-950 shadow-lg ">
+       <div class="max-w-6xl mx-auto px4">
+        <div class="flex justify-between" >
+    <div  class="flex space-x-7">
+        <div>
+            <a href="#" class ='flex items-center px-2 py-4'>
             <img class="h-20 w-20 shadow-fuchsia-700" src="{% static 'myapp/images/logo.png' %}"  alt="logo" about="logo"/>
-            <span class="text-xl">Akademi sex trip</span>
+            <span class="text-xl font-semibold">Akademi sex trip</span>
+                </a>
+            </div>
+        <div class="items-center flex space-x-7">
+            <a href="#" class="py-4 px4 text-xl font-semibold border-b-4 border-black">Home</a>
+            <a href="#" class="py-4 px4 text-xl font-semibold border-b-4 border-black">About</a>
+            <a href="#" class="py-4 px4 text-xl font-semibold border-b-4 border-black">Contacts</a>
         </div>
+        </div>
+            </div>
+           </div>
     </nav>
 <h2>
     {% for product in item %}
@@ -24,5 +30,4 @@
 
     {% endfor %}
 </h2>
-</body>
-</html>
+{% endblock content %}
